@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="stud-es6:war">
+    <output-path>$PROJECT_DIR$/stud-es6/target</output-path>
+    <root id="archive" name="stud-es6.war">
+      <element id="artifact" artifact-name="stud-es6:war exploded" />
+    </root>
+  </artifact>
+</component>
