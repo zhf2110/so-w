@@ -66,3 +66,48 @@ export default hello;
 
  ** this.props.children 获取组件包裹内容
 ```
+
+##### dva学习
+ - model层，用来做数据模板，帮page层显示用
+ ```
+ export default {
+   // 类似package
+   namespace:'userList',
+   // 数据体，属性列表
+   state:{
+     list:[]
+   },
+   //函数部分，用来操作数据体
+     reducers:{
+       //state 更新之前的state
+       queryList(state,result){
+         let data = [...result.data];
+         //更新之后的数据
+         return {
+           list:data
+         }
+       }
+     }}
+ }
+ ```
+ - page层，用来做数据的显示，和操作
+ ```
+ 1.引入dva，用来做数据桥接
+ import {connect} from 'dva';
+ 2.指定name，用来区别使用的model
+ const namespace = "userList";
+ 3.在组建上做注解
+ @connect((state)=>{
+     //state 是全局的，需要根据namespace指向对应的model,便可以使用model的state对象中的数据
+     const listData = state[namespace].list;
+     //返回一个对象到this.props中，组建就可以使用返回的对象属性做数据的显示
+     return {datas:listData}
+ },(dispatch)=>{
+     //返回一个对象（属性为函数，用来修改model中的数据），绑定到this.props中，根据namespace+/函数名，定位到model中reducers的对应方法。
+     return {
+         queryList:()=>{
+             dispatch({type:namespace+"/queryList"})
+         }
+     }
+ })
+ ```
