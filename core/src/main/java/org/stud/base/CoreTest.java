@@ -5,6 +5,7 @@ import java.util.Set;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.authc.pam.ModularRealmAuthenticator;
 import org.apache.shiro.config.IniSecurityManagerFactory;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.subject.PrincipalCollection;
@@ -48,6 +49,7 @@ public class CoreTest {
 			LOGGER.info("认证数据域的名称为：{}",realm);
 		}
 
+		ModularRealmAuthenticator a;
 
 		/*if(subject.isAuthenticated()){
 			LOGGER.info("已认证退出");

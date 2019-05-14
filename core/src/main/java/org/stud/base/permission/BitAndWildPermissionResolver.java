@@ -5,6 +5,7 @@ import org.apache.shiro.authz.permission.PermissionResolver;
 import org.apache.shiro.authz.permission.WildcardPermission;
 
 /**
+ * 将字符串转为对应的权限
  * @author zhangfeng542
  * @date 5/6/19
  */

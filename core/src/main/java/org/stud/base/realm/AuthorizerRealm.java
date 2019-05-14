@@ -18,12 +18,18 @@ import org.stud.base.permission.BitPermission;
  */
 public class AuthorizerRealm extends AuthorizingRealm {
 
+	/**
+	 * 获取权限信息
+	 * @param principalCollection
+	 * @return
+	 */
 	@Override
 	protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
+		//创建权限信息实例
 		SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
-
+        //添加角色
 		simpleAuthorizationInfo.addRoles(Arrays.asList("role1","role2"));
-
+        //添加权限
 		simpleAuthorizationInfo.addObjectPermissions(Arrays.asList(new BitPermission("+user1+10"),new WildcardPermission("user1:*")));
 		simpleAuthorizationInfo.addStringPermissions(Arrays.asList("+user2+8","user2:*"));
 
@@ -31,10 +37,16 @@ public class AuthorizerRealm extends AuthorizingRealm {
 	}
 
 
-
+	/**
+	 * 获取认证信息
+	 * @param authenticationToken
+	 * @return
+	 * @throws AuthenticationException
+	 */
 	@Override
 	protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken)
 		throws AuthenticationException {
+		//通过realm认证源，返回认证信息
 		BaseRealm baseRealm = new BaseRealm();
 		return baseRealm.getAuthenticationInfo(authenticationToken);
 	}
