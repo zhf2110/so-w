@@ -1,0 +1,10 @@
+person:
+   name: zhangs
+   age: 12
+   ps:
+     - cat
+     - t
+     - ps
+   map:
+     ss: tt
+     pp: dd

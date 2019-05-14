@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "person",
+      "type": "org.stu.yml.Person",
+      "sourceType": "org.stu.yml.Person"
+    }
+  ],
+  "properties": [
+    {
+      "name": "person.age",
+      "type": "java.lang.Integer",
+      "sourceType": "org.stu.yml.Person"
+    },
+    {
+      "name": "person.map",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "sourceType": "org.stu.yml.Person"
+    },
+    {
+      "name": "person.name",
+      "type": "java.lang.String",
+      "sourceType": "org.stu.yml.Person"
+    },
+    {
+      "name": "person.ps",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "org.stu.yml.Person"
+    }
+  ],
+  "hints": []
+}
