@@ -40,6 +40,11 @@ public class BitPermission implements Permission{
 		}
 	}
 
+	/**
+	 * 判断是否拥有权限，返回true说明存在此权限
+	 * @param permission
+	 * @return
+	 */
 	@Override
 	public boolean implies(Permission permission) {
 		if(permission instanceof BitPermission){
