@@ -5,8 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
       <module fileurl="file://$PROJECT_DIR$/es-service/es-service.iml" filepath="$PROJECT_DIR$/es-service/es-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/so-w.iml" filepath="$PROJECT_DIR$/.idea/so-w.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sso/sso.iml" filepath="$PROJECT_DIR$/sso/sso.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sso-common/sso-common.iml" filepath="$PROJECT_DIR$/sso-common/sso-common.iml" />
     </modules>
   </component>
 </project>
