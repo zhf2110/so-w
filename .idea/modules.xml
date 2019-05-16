@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/so-w.iml" filepath="$PROJECT_DIR$/.idea/so-w.iml" />
       <module fileurl="file://$PROJECT_DIR$/sso/sso.iml" filepath="$PROJECT_DIR$/sso/sso.iml" />
       <module fileurl="file://$PROJECT_DIR$/sso-common/sso-common.iml" filepath="$PROJECT_DIR$/sso-common/sso-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thread-saif/thread-saif.iml" filepath="$PROJECT_DIR$/thread-saif/thread-saif.iml" />
     </modules>
   </component>
 </project>
