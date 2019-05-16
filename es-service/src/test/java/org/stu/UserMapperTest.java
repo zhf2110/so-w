@@ -1,6 +1,10 @@
 package org.stu;
 
 import java.util.List;
+
+import jdk.nashorn.internal.parser.JSONParser;
+import net.minidev.json.JSONUtil;
+import org.json.JSONObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -10,6 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.stu.domain.User;
 import org.stu.mapper.UserMapper;
+import org.stu.yml.Person;
 
 /**
  * @author zhangfeng542
@@ -21,16 +26,21 @@ public class UserMapperTest {
 
 	private final static Logger LOGGER = LoggerFactory.getLogger(UserMapperTest.class);
 
+//	@Autowired
+//	private UserMapper userMapper;
+
 	@Autowired
-	private UserMapper userMapper;
+	private Person person;
 
 	@Test
 	public void selectUser(){
-		List<User> us = userMapper.selectList(null);
+//		List<User> us = userMapper.selectList(null);
 
-		for(User u : us){
-			LOGGER.info("对象内容为：{}",u.getName());
-		}
+//		for(User u : us){
+//			LOGGER.info("对象内容为：{}",u.getName());
+//		}
+
+		LOGGER.info("{}", JSONUtil.convertToStrict(person,String.class));
 	}
 
 }
