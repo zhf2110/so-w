@@ -1,0 +1,21 @@
+server:
+  port: 8089
+
+spring:
+  application:
+    name: room-gateway
+  gateway:
+    routes:
+      - id: room_app
+        uri: http://www.ityouknow.com
+        predicates:
+          - Path=/spring-cloud
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/
+
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
